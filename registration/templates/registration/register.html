@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="The HTML5 Herald">
+</head>
+
+<body>
+
+<form method="POST" action="{% url 'register' %}">
+  {% csrf_token %}
+
+  {{form}}
+
+<input type="submit" value="register">
+
+</form>
+</body>
+</html>

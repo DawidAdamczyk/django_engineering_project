@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta name="description" content="The HTML5 Herald">
+</head>
+
+<body>
+{% if form.error %}
+<p>dupa</p>
+{% endif %}
+
+{% if next %}
+
+{% endif %}
+
+<form method="POST" action="{% url 'login' %}">
+  {% csrf_token %}
+
+  <p>{{form.username}}</p>
+  <p>{{form.password}}</p>
+
+  <input type="submit" value="login">
+  <input type="hidden" value="{{ next }}">
+
+</form>
+</body>
+</html>
